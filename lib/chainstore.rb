@@ -10,7 +10,9 @@ require 'chainstore/stores/s3_store.rb'
 #TODO: Logging
 
 module Chainstore
+
   class Chain
+
     def initialize(*links)
       @first = nil
       last = nil
@@ -42,5 +44,4 @@ module Chainstore
     end
 
   end
-
 end

@@ -70,7 +70,7 @@ describe Chainstore::Chain do
   end
 
   context 'LRU and naive stores in chain' do
-    let(:lru_one) { LRU_MemoryStore.new 4 }
+    let(:lru_one) { LRU_MemoryStore.new 4}
     let(:ims_two) { InMemoryNaiveStore.new }
     let(:chain) { Chainstore::Chain.new(lru_one, ims_two) }
     let(:lru_only_chain) { Chainstore::Chain.new(lru_one) }

@@ -12,7 +12,8 @@ Gem::Specification.new do |spec|
   spec.description   = %q{Store key/value pairs in a chain of k/v storage services organized in a chain of responsibility pattern.}
   spec.homepage      = 'http://github.com/4n3w/chainstore'
   spec.license       = 'MIT'
-  spec.files         = `git ls-files`.split($/)
+  #spec.files         = `git ls-files`.split($/)
+  spec.files         = Dir.glob('lib/**/*')
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = %w{lib/*}
