@@ -23,8 +23,8 @@ describe Chainstore::Chain do
   end
 
   context 'multiple Naive in memory stores' do
-    let(:ims_one) { InMemoryNaiveStore.new 'One' }
-    let(:ims_two) { InMemoryNaiveStore.new 'Two' }
+    let(:ims_one) { InMemoryNaiveStore.new }
+    let(:ims_two) { InMemoryNaiveStore.new }
     let(:chain) { Chainstore::Chain.new(ims_one, ims_two) }
 
     context '.initialize' do
@@ -70,8 +70,8 @@ describe Chainstore::Chain do
   end
 
   context 'LRU and naive stores in chain' do
-    let(:lru_one) { LRU_MemoryStore.new 4, 'LRU One' }
-    let(:ims_two) { InMemoryNaiveStore.new 'Naive Two' }
+    let(:lru_one) { LRU_MemoryStore.new 4 }
+    let(:ims_two) { InMemoryNaiveStore.new }
     let(:chain) { Chainstore::Chain.new(lru_one, ims_two) }
     let(:lru_only_chain) { Chainstore::Chain.new(lru_one) }
 
@@ -216,7 +216,7 @@ describe Chainstore::Chain do
   end
 
   context 'Redis and Naive in memory stores' do
-    let(:ims_one) { InMemoryNaiveStore.new 'One' }
+    let(:ims_one) { InMemoryNaiveStore.new }
     let(:redis_two) { RedisStore.new }
     let(:chain) { Chainstore::Chain.new(ims_one, redis_two) }
 

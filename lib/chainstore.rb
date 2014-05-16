@@ -2,6 +2,10 @@ require 'chainstore/version'
 require 'chainstore/exceptions'
 require 'chainstore/stores/store'
 require 'chainstore/stores/linkable_store'
+require 'chainstore/stores/in_memory_naive_store.rb'
+require 'chainstore/stores/lru_memory_store.rb'
+require 'chainstore/stores/redis_store.rb'
+require 'chainstore/stores/s3_store.rb'
 
 #TODO: Logging
 #TODO: S3 Gem, Redis Gem
