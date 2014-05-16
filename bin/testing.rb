@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require 'chainstore'
 
 lru = LRU_MemoryStore.new 16

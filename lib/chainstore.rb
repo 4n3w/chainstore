@@ -12,7 +12,6 @@ require 'chainstore/stores/s3_store.rb'
 module Chainstore
 
   class Chain
-
     def initialize(*links)
       @first = nil
       last = nil
