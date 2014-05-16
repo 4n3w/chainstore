@@ -8,9 +8,6 @@ require 'chainstore/stores/redis_store.rb'
 require 'chainstore/stores/s3_store.rb'
 
 #TODO: Logging
-#TODO: S3 Gem, Redis Gem
-#TODO: Setup s3
-#TODO: Setup Redis
 
 module Chainstore
   class Chain
