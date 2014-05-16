@@ -13,7 +13,6 @@ require 'chainstore/stores/s3_store.rb'
 #TODO: Setup Redis
 
 module Chainstore
-
   class Chain
     def initialize(*links)
       @first = nil
