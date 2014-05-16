@@ -43,5 +43,4 @@ module Chainstore
 
   end
 
-
 end
