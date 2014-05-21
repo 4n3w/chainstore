@@ -179,7 +179,7 @@ describe Chainstore::Chain do
   end
 
   context 'S3-only chain' do
-    let(:s3) { S3Store.new 'AKIAI2BCDKXTOHL7PM4A', 'z3xfZdRn+bqixtcxZZKJTwtPQ/bGcNTLxm+ZOzC9', 's3.amazonaws.com', 'testing-chainstore-pressly' }
+    let(:s3) { S3Store.new 'accessKeyId', 'secretAccessKey', 's3.amazonaws.com', 'testing-chainstore-pressly' }
     let(:chain) { Chainstore::Chain.new(s3) }
 
     context '.initialize' do
